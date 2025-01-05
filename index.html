@@ -8,8 +8,7 @@
         .hamburger {
             grid-area: 1 / 1 / 3 / 2;
             cursor: pointer;
-            padding: 1vh 1vw;
-            background-color: gray;
+            /* background-color: gray; */
             justify-self: center;
         }
         .bar {
@@ -21,19 +20,20 @@
         /* Add a black background color to the top navigation */
         .topnav {
             display: grid;
-            grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+            grid-template-columns: 2fr 3fr repeat(15, 1fr) 4fr;
             grid-template-rows: auto auto;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
             background-color: #333;
             overflow: hidden;
-            gap: 5px;
+            gap: 5px 0px;
         }
         /* Style the links inside the navigation bar */
         .topnav a {
         color: #f2f2f2;
-        text-align: center;
         text-decoration: none;
         font-size: 17px;
-        padding: 0px 1vw;
         }
         /* Change the color of links on hover */
         .topnav a:hover {
@@ -43,16 +43,14 @@
         .topnav input[type=text] {
             grid-area: 1 / 18 / 3 / 19;
             align-self: right;
-            padding: 6px;
             border: none;
-            margin: 16px 8px;
+            margin: 0px 2em 0px 0px;
         }
         .start {
             list-style-type: none;
             padding: 0;
             margin: 0;
             grid-area: 1 / 2 / 3 / 3;
-            align-self: center;
         }
         .start li {
             float: left;
@@ -61,71 +59,57 @@
             display: block;
             color: white;
             text-align: center;
-            padding: 14px 16px;
+            padding: 7px 8px;
             text-decoration: none;
         }
         #story {
             grid-area: 1 / 3 / 2 / 8;
-            align-self: center;
-            background-color: gray;
         }
         #story2 {
             grid-area: 1 / 8 / 2 / 13;
-            align-self: center;
-            background-color: gray;
         }
         #analysis {
             grid-area: 1 / 13 / 2 / 18;
-            align-self: center;
-            background-color: gray;
         }
         #spain {
             grid-area: 2 / 3 / 3 / 6;
-            align-self: center;
-            background-color: gray;
         }
         #england {
             grid-area: 2 / 6 / 3 / 9;
-            align-self: center;
-            background-color: gray;
         }
         #germany {
             grid-area: 2 / 9 / 3 / 12;
-            align-self: center;
-            background-color: gray;
         }
         #italy {
             grid-area: 2 / 12 / 3 / 15;
-            align-self: center;
-            background-color: gray;
         }
         #franch {
             grid-area: 2 / 15 / 3 / 18;
-            align-self: center;
-            background-color: gray;
         }
     </style>
 </head>
 <body>
-    <div class="topnav">
-        <div class="hamburger">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+    <section>
+        <div class="topnav">
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="start">
+                <li><a href="#Logo">Logo</a></li>
+                <li><a href="#MF">Mezzala Football</a></li>
+            </ul>
+            <a href="#story" id="story">球員故事</a>
+            <a href="#story" id="story2">球員故事</a>
+            <a href="#analysis" id="analysis">比賽分析</a>
+            <a href="#spain" id="spain">西甲</a>
+            <a href="#england" id="england">英超</a>
+            <a href="#germany" id="germany">德甲</a>
+            <a href="#italy" id="italy">意甲</a>
+            <a href="#franch" id="franch">法甲</a>
+            <input type="text" placeholder="Search..">
         </div>
-        <ul class="start">
-            <li><a href="#Logo">Logo</a></li>
-            <li><a href="#MF">Mezzala Football</a></li>
-        </ul>
-        <a href="#story" id="story">球員故事</a>
-        <a href="#story" id="story2">球員故事</a>
-        <a href="#analysis" id="analysis">比賽分析</a>
-        <a href="#spain" id="spain">西甲</a>
-        <a href="#england" id="england">英超</a>
-        <a href="#germany" id="germany">德甲</a>
-        <a href="#italy" id="italy">意甲</a>
-        <a href="#franch" id="franch">法甲</a>
-        <input type="text" placeholder="Search..">
-    </div>
+    </section>
 </body>
 </html>
