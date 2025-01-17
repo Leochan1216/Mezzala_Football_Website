@@ -1,0 +1,37 @@
+#mz-icon {
+    width: 30%;
+    height: 30%;
+    border: 1px solid yelow;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+
+
+    li {
+        float: left;
+
+        a {
+            display: block;
+            padding: 1.5rem 3rem;
+    
+            &:hover {
+                background-color: grey;
+            }
+        }
+    
+        button {
+            display: block;
+            padding: 1.5rem 3rem;
+    
+            &:hover {
+                background-color: grey;
+            }
+        }
+    }
+}
+
