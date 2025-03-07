@@ -11,30 +11,66 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li class="logo"><a  href="index.html"><img class="mz-logo" src="img/MZ.jpg" alt=""></a></li>
-                <li><a href="account.html"><i class="fa-solid fa-user"></i></a></li>
-                <li><a href="forum.html">Forum</a></li>
-                <li class="dropdown">
-                    <a href="article.html">Article</a>
-                    <ul class="dropdown-content">
-                        <li><a href="">1</a></li>
-                        <li><a href="">2</a></li>
-                        <li><a href="">3</a></li>
-                        <li><a href="">4</a></li>
-                        <li><a href="">5</a></li>
-                    </ul>
-                    <ul class="dropdown-content">
-                        <li><a href="">A</a></li>
-                        <li><a href="">B</a></li>
-                        <li><a href="">C</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo"><img src="img/MZ.jpg" alt="logo"></div>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search...">
+            <button id="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="user-icon">
+            <i class="fas fa-user"></i>
+        </div>
     </header>
+
+    <!-- Filters -->
+    <section class="filters">
+        <button id="latest-btn">Latest Post</button>
+        <button id="most-viewed-btn">Most Viewed</button>
+        <button id="filter-btn">Filter <i class="fas fa-chevron-down"></i></button>
+    </section>
+
+    <!-- Blog Posts -->
+    <main class="posts" id="posts-container">
+        <article class="post">
+            <h3>Post Title 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button class="read-more">Read More</button>
+        </article>
+        <article class="post">
+            <h3>Post Title 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button class="read-more">Read More</button>
+        </article>
+        <article class="post">
+            <h3>Post Title 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button class="read-more">Read More</button>
+        </article>
+        <article class="post">
+            <h3>Post Title 4</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button class="read-more">Read More</button>
+        </article>
+    </main>
+
+    <!-- Pagination -->
+    <div class="pagination">
+        <button id="prev-page">&laquo; Prev</button>
+        <span id="page-number">1</span>
+        <button id="next-page">Next &raquo;</button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 Mezalla_Football | All rights reserved.</p>
+        <div class="socials">
+            <a href="#">YouTube</a>
+            <a href="#">Instagram</a>
+            <a href="#">Threads</a>
+        </div>
+    </footer>
+
     
 </body>
 </html>
