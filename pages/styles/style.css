@@ -47,13 +47,13 @@ p {
 .header {
   position: fixed;
   top: 0;
-  width: 100vw;
+  width: 100vmax;
   max-width: 1920px;
   background: #fff;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 10px 0;
+  padding: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
@@ -61,7 +61,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 20px;
+  height: auto;
 }
 .header .logo img {
   max-width: 40px;
@@ -75,6 +75,7 @@ p {
   align-items: center;
   flex-grow: 1;
   max-width: 600px;
+  margin: 10px;
 }
 .header .search-container input {
   padding: 8px;
