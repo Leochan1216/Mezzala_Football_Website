@@ -1,119 +1,67 @@
-<<<<<<< HEAD
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
+# Generic (CALLED IN ANOTHER FILE)
+    - Normalize
+    - Box sizing
+    - Media width
 # Base
-  - Typography
-  - Elements
-  - Links
+    - Typography
+    - Elements
+    - Links
 # Layout
 # Components
-  - Header
-  - Main
-  - Footer
+    - Header
+    - Main
+    - Footer
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
 
-html, body {
-    height: 100vh;
-    margin: 0;
-}
-=======
-/* Updated SCSS to match the provided design */
->>>>>>> 1be4a6bceb50fee257b5697fedf7da3bcc430a8a
-
-/* Background Gradient */
+/* Typography
+--------------------------------------------- */
 body {
     background: linear-gradient(to right, #007bff, #8a2be2);
     color: white;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-}
-
-<<<<<<< HEAD
-main {
-    flex-grow: 1;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding-top: 70px;
+    padding-bottom: 60px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #333;
+    color: white;
 }
 
 p {
-    color: #555;
+    color: #ccc;
+}
+
+/* Elements
+--------------------------------------------- */
+ul, ol, dl, figure, table {
+    margin: 0;
+    padding: 0;
+}
+
+/* Links
+--------------------------------------------- */
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 /*--------------------------------------------------------------
-# Components
+# Layout
 --------------------------------------------------------------*/
 
-/* Header */
-=======
-/* Header Styling */
->>>>>>> 1be4a6bceb50fee257b5697fedf7da3bcc430a8a
-.header {
-    background: #222;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-<<<<<<< HEAD
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-=======
-    padding: 0;
-    width: 100vw;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
->>>>>>> 1be4a6bceb50fee257b5697fedf7da3bcc430a8a
-    z-index: 1000;
-}
-
-.logo img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-}
-
-.search-container {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-}
-
-.search-container input {
-    width: 50%;
-    padding: 10px;
-    border-radius: 10px;
-    border: none;
-    font-size: 16px;
-}
-
-.user-icon {
-    max-width: 20px;
-}
-
-.user-icon img {
-    width: 2rem;
-    height: auto;
-    border-radius: 50%;
-}
-
-body {
-    padding-top: 70px;
-}
-
-/* Filters */
 .filters {
     display: flex;
     justify-content: center;
@@ -134,7 +82,69 @@ body {
     background: #0056b3;
 }
 
-/* Posts Styling */
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+
+/* Header
+--------------------------------------------- */
+.header {
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.search-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-width: 500px;
+    width: 50%;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+}
+
+.search-container button {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+}
+
+.user-icon {
+    display: none;
+}
+
+/* Main
+--------------------------------------------- */
 .posts {
     display: flex;
     flex-direction: column;
@@ -147,14 +157,6 @@ body {
     border-radius: 10px;
     width: 80%;
     margin: 10px 0;
-}
-
-.post h3 {
-    color: white;
-}
-
-.post p {
-    color: #ccc;
 }
 
 /* Pagination */
@@ -178,7 +180,8 @@ body {
     background: #0056b3;
 }
 
-/* Footer */
+/* Footer
+--------------------------------------------- */
 .footer {
     background: #111;
     padding: 15px;
@@ -195,20 +198,9 @@ body {
 }
 
 .footer p {
-    color: white;
     margin: 0;
 }
 
 .socials a {
-    color: white;
     margin: 0 10px;
-    text-decoration: none;
-}
-
-.socials a:hover {
-    text-decoration: underline;
-}
-
-body {
-    padding-bottom: 60px;
 }
