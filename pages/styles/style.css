@@ -1,59 +1,24 @@
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Base
-  - Typography
-  - Elements
-  - Links
-# Layout
-# Components
-  - Header
-  - Main
-  - Footer
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Base
---------------------------------------------------------------*/
-html, body {
-  height: 100vh; /*The height should be relative to hight of browser window size*/
-  margin: 0;
-}
-
+/* Updated SCSS to match the provided design */
+/* Background Gradient */
 body {
-  min-height: 100vh;
+  background: linear-gradient(to right, #007bff, #8a2be2);
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-main {
-  flex-grow: 1;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color: #333;
-}
-
-p {
-  color: #555;
-}
-
-
-/*--------------------------------------------------------------
-# Components
---------------------------------------------------------------*/
-/* Header */
+/* Header Styling */
 .header {
   position: fixed;
   top: 0;
-  width: 100vmax;
+  width: 100vw;
   max-width: 1920px;
   background: #fff;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 10px;
+  padding: 10px 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
@@ -61,7 +26,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: auto;
+  height: 20px;
 }
 .header .logo img {
   max-width: 40px;
@@ -69,13 +34,14 @@ p {
   object-fit: contain;
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
 }
-.header .search-container {
+
+.search-container {
+  flex-grow: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
   max-width: 600px;
-  margin: 10px;
 }
 .header .search-container input {
   padding: 8px;
@@ -87,109 +53,121 @@ p {
 .header .search-container button {
   background: #007bff;
   border: none;
-  padding: 8px;
-  cursor: pointer;
-  margin-left: 5px;
-  color: white;
-  border-radius: 20px;
+  font-size: 16px;
 }
-.header .user-icon {
-  padding: 8px;
+
+.user-icon {
+  max-width: 20px;
 }
-.header .user-icon i {
-  font-size: 20px;
-  cursor: pointer;
+
+.user-icon img {
+  width: 2rem;
+  height: auto;
+  border-radius: 50%;
+}
+
+body {
+  padding-top: 70px;
 }
 
 /* Filters */
 .filters {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin: 100px 0 20px;
+  margin: 20px 0;
 }
 
 .filters button {
-  padding: 10px 15px;
   background: #007bff;
-  border: none;
   color: white;
-  cursor: pointer;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
   border-radius: 5px;
+  cursor: pointer;
 }
 
-/* Posts */
+.filters button:hover {
+  background: #0056b3;
+}
+
+/* Posts Styling */
 .posts {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 900px;
-  width: 100%;
-  margin: 0 auto;
-  gap: 20px;
 }
-.posts .post {
-  width: 100%;
-  max-width: 800px;
-  background: white;
+
+.post {
+  background: #111;
   padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 80%;
+  margin: 10px 0;
 }
-.posts .post h3 {
-  margin-top: 0;
-}
-.posts .post .read-more {
-  padding: 8px 12px;
-  border: none;
-  background: #007bff;
+
+.post h3 {
   color: white;
-  cursor: pointer;
-  border-radius: 5px;
+}
+
+.post p {
+  color: #ccc;
 }
 
 /* Pagination */
 .pagination {
   display: flex;
   justify-content: center;
-  gap: 10px;
   margin: 20px 0;
 }
+
 .pagination button {
-  padding: 8px 12px;
-  border: none;
   background: #007bff;
   color: white;
-  cursor: pointer;
+  border: none;
+  padding: 5px 10px;
+  margin: 5px;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  background: #0056b3;
 }
 
 /* Footer */
 .footer {
-  width: 100%;
-  background: #007bff;
-  color: white;
-  text-align: center;
+  background: #111;
   padding: 15px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.footer .socials a {
+
+.footer p {
+  color: white;
+  margin: 0;
+}
+
+.socials a {
   color: white;
   margin: 0 10px;
   text-decoration: none;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  .posts {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-  }
+.socials a:hover {
+  text-decoration: underline;
 }
-@media screen and (max-width: 480px) {
-  .posts {
-    grid-template-columns: 1fr;
-  }
+
+body {
+  padding-bottom: 60px;
 }
 
 /*# sourceMappingURL=style.css.map */
