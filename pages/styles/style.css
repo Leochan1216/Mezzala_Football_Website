@@ -10,36 +10,48 @@ body {
 
 /* Header Styling */
 .header {
-  background: #222;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  max-width: 1920px;
+  background: #fff;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 0;
-  width: 100vw;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 60px;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
-
-.logo img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+.header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+}
+.header .logo img {
+  max-width: 40px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
 }
 
 .search-container {
   flex-grow: 1;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  max-width: 600px;
 }
-
-.search-container input {
-  width: 50%;
-  padding: 10px;
-  border-radius: 10px;
+.header .search-container input {
+  padding: 8px;
+  border: solid 1px #007bff;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+.header .search-container button {
+  background: #007bff;
   border: none;
   font-size: 16px;
 }
